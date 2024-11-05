@@ -9,7 +9,7 @@ class UI:
         self.ui = ui
         self.first = 0
         device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.summarizer = pipeline("summarization", model="text_summarization/", device=device)
+        self.summarizer = pipeline("summarization", model="text_summarization", device=device)
         self.is_start = False
 
     def test(self, txt):
